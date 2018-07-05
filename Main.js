@@ -1,7 +1,7 @@
 (function(){
 
 //エディタカスタマイズ用
-function createEditor(node){
+function createCustomEditor(node){
 	var editor = createTextEditor();	//テキストエディタの作成
 	editor.setSize(1200,800);			//サイズの指定
 	editor.setPos();					//位置を中央に設定
@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded",onLoad);
 function onLoad(){
 	//DIVタグをクリックしたらテキストエディタを作成する
 	var nodes = document.querySelectorAll("div.target");
-	for(var i in nodes){
+	for(var i=0;i<nodes.length;i++){
 		nodes[i].addEventListener("click",function(){
-			createEditor(this);
+			createCustomEditor(this);
 		});
 	}
 }

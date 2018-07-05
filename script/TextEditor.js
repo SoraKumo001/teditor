@@ -21,6 +21,7 @@ function createTextEditor(){
 
 		frame.addChild(colorPicker,"client");
 		frame.setSize(400, 400);
+		frame.setOrderSystem(true);
 		frame.setPos();
 	}
 	function createLink(select)
@@ -33,6 +34,8 @@ function createTextEditor(){
 		var input = GUI.createTextInputWindow();
 		input.setTitle("リンク");
 		input.addEvent("enter",onLink);
+		input.setOrderSystem(true);
+		input.setSize(400,30);
 
 	}
 
