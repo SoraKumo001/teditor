@@ -354,7 +354,7 @@
 		win.GUI = {
 			x:0,y:0,width:640,height:480,parent:null,minimize:false,maximize:false,move:false,
 			padding:{x1:0,y1:0,x2:0,y2:0},
-			visible:true,events:{},layout:true,child:[],orderTop:false,sortZ:0,parts:{}};
+			visible:true,events:{},layout:true,child:[],orderTop:false,sortZ:500,parts:{}};
 	
 	
 		function createElementByClassName(parent,nameArray){
@@ -589,7 +589,7 @@
 			return win.GUI.y;
 		}
 		win.setSortZ = function(v){
-			win.GUI.sortZ = v;
+			win.GUI.sortZ = v+500;
 		}
 		win.setPos = function(x,y){
 			if(x==null || y==null){
